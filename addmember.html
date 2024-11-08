@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Membership Form</title>
+    <link rel="stylesheet" href="sty.css">
+    <script>
+        // Function to handle form submission and redirect
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            // Redirect to another page (change the URL to your target page)
+            window.location.href = 'nextpage.html';  // You can change this to your target page
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Add Membership</h2>
+        <!-- Using an onsubmit event to trigger the JavaScript function -->
+        <form onsubmit="handleSubmit(event)">
+            
+            <label for="membername">Member Name:</label>
+            <input type="text" id="membername" name="membername" required placeholder="Enter your name">
+
+            <label for="memberemail">Member Email:</label>
+            <input type="email" id="memberemail" name="memberemail" required placeholder="Enter your email">
+
+            <label for="membership-duration">Membership Duration:</label>
+            <select id="membership-duration" name="membership-duration" required>
+                <option value="6months" selected>6 Months</option>
+                <option value="1year">1 Year</option>
+                <option value="2years">2 Years</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

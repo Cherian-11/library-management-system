@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Books</title>
+    <link rel="stylesheet" href="st.css">
+    <script>
+        // Function to handle form submission and redirect
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            // Get selected books
+            const selectedBooks = [];
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                selectedBooks.push(checkbox.value);
+            });
+
+            if (selectedBooks.length > 0) {
+                alert("Books selected: " + selectedBooks.join(", "));
+                window.location.href = 'nextpage.html';  // Redirect to another page
+            } else {
+                alert("Please select at least one book.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Select Books to Add</h2>
+
+        <!-- Form for selecting books -->
+        <form onsubmit="handleSubmit(event)">
+            <div class="book-item">
+                <input type="checkbox" id="book1" name="book" value="The Great Gatsby">
+                <label for="book1">The Great Gatsby</label>
+            </div>
+            <div class="book-item">
+                <input type="checkbox" id="book2" name="book" value="1984">
+                <label for="book2">1984</label>
+            </div>
+            <div class="book-item">
+                <input type="checkbox" id="book3" name="book" value="To Kill a Mockingbird">
+                <label for="book3">To Kill a Mockingbird</label>
+            </div>
+            <div class="book-item">
+                <input type="checkbox" id="book4" name="book" value="Brave New World">
+                <label for="book4">Brave New World</label>
+            </div>
+            <div class="book-item">
+                <input type="checkbox" id="book5" name="book" value="Pride and Prejudice">
+                <label for="book5">Pride and Prejudice</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

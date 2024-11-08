@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Update</title>
+    <link rel="stylesheet" href="sty.css">
+    <script>
+        // Function to handle form submission and redirect
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            // Get the form data here (optional)
+            const memberId = document.getElementById('memberid').value;
+            const membershipDuration = document.getElementById('membership-duration').value;
+            const membershipAction = document.querySelector('input[name="membership-action"]:checked').value;
+
+            // You can display the data, or use it to update records in your backend (e.g., through an API).
+            console.log(`Member ID: ${memberId}, Duration: ${membershipDuration}, Action: ${membershipAction}`);
+
+            // Redirect to another page (change the URL to your target page)
+            window.location.href = 'nextpage.html';  // You can change this to your target page
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Update Membership</h2>
+        <!-- Using an onsubmit event to trigger the JavaScript function -->
+        <form onsubmit="handleSubmit(event)">
+            
+            <!-- Radio buttons for Extend or Cancel membership -->
+            <label>Membership Status:</label>
+            <br>
+            <div class="radio-group">
+                <label for="extend">
+                    <input type="radio" id="extend" name="membership-action" value="new" checked> New User
+                </label>
+                <label for="cancel">
+                    <input type="radio" id="cancel" name="membership-action" value="existing"> Existing User
+                </label>
+                <br>
+                <br>
+
+                 <!-- Member ID Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter Name">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

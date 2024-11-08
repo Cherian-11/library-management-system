@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Return</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Return Book</h2>
+        <form action="payfine.html" method="POST">
+            <label for="bookname">Book Name:</label>
+            <input type="text" id="bookname" name="bookname" required>
+
+            <label for="authorname">Author Name:</label>
+            <input type="text" id="authorname" name="authorname" required>
+
+            <label for="serialno">Serial No.:</label>
+            <input type="text" id="serialno" name="serialno" required>
+
+            <label for="issuedate">Issue Date:</label>
+            <input type="date" id="issuedate" name="issuedate" required>
+
+            <label for="returndate">Return Date:</label>
+            <input type="date" id="returndate" name="returndate" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
