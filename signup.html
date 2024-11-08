@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.webp" alt="Library Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-form">
+            <h2>Create a New Account</h2>
+            <form action="nextpage.html" method="GET">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label1>Gender</label1>
+                <div class="gender">
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male" required> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                    </label>
+                    <label for="others">
+                        <input type="radio" id="others" name="gender" value="Others"> Others
+                    </label>
+                </div>
+
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10">
+
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <label for="confirm-password"></label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+                <button type="submit">Sign Up</button>
+                <p id="signup-error-message" class="error-message"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Library Management System</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
