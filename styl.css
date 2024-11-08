@@ -1,0 +1,139 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+/* Container for the options (10 squares) */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns */
+    grid-gap: 20px;
+    max-width: 1100px;  /* To limit container width */
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Styling for each option (square) */
+.option {
+    width: 180px;
+    height: 180px;
+    background-color: #3498db; /* Blue */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline from links */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on each square */
+.option:hover {
+    transform: translateY(-5px); /* Lift the square slightly */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Different background colors for each option */
+#option1 {
+    background-color: #3498db; /* Blue */
+}
+
+#option2 {
+    background-color: #e74c3c; /* Red */
+}
+
+#option3 {
+    background-color: #2ecc71; /* Green */
+}
+
+#option4 {
+    background-color: #f39c12; /* Yellow */
+}
+
+#option5 {
+    background-color: #9b59b6; /* Purple */
+}
+
+#option6 {
+    background-color: #1abc9c; /* Teal */
+}
+
+#option7 {
+    background-color: #f1c40f; /* Gold */
+}
+
+#option8 {
+    background-color: #16a085; /* Turquoise */
+}
+
+#option9 {
+    background-color: #e67e22; /* Orange */
+}
+
+#option10 {
+    background-color: #34495e; /* Dark Gray */
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .options-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .options-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .options-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile screens */
+    }
+
+    .option {
+        width: 150px; /* Smaller squares on mobile */
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .options-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .option {
+        width: 120px; /* Even smaller squares on very small screens */
+        height: 120px;
+    }
+}
